@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 // import App from "./App";
 import ContentHolder from "./ContentHolder";
 import CommentsHolder from "./CommentsHolder";
-import "./index.css"
+import "./index.css";
 
 ReactDOM.render(
   <React.Fragment>

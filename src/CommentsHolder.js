@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Comment extends Component {
   constructor(props, context) {
@@ -26,7 +26,9 @@ class Comment extends Component {
         <div>{this.props.content}</div>
         <br />
 
-        <div style={commentTimeStyle}><i>{this.props.name}</i> commented at: {this.curTime}</div>
+        <div style={commentTimeStyle}>
+          <i>{this.props.name}</i> commented at: {this.curTime}
+        </div>
       </div>
     );
   }
@@ -50,10 +52,12 @@ class CommentsHolder extends React.Component {
     });
 
     this.allComments.push(
-      <Comment content={this.refs._comment.value}
-        name={this.refs._name.value} key={this.state.comments} />
+      <Comment
+        content={this.refs._comment.value}
+        name={this.refs._name.value}
+        key={this.state.comments}
+      />
     );
-
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -77,7 +81,7 @@ class CommentsHolder extends React.Component {
         &nbsp; <strong>Name:</strong>
         <input ref="_name" />
         &nbsp;<button type="button" onClick={this.postComment}>
-         Post Comment
+          Post Comment
         </button>
         <br />
         <div>{this.allComments}</div>
@@ -86,4 +90,4 @@ class CommentsHolder extends React.Component {
   }
 }
 
-export  default CommentsHolder;
+export default CommentsHolder;
